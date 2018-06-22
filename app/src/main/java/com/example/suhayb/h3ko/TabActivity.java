@@ -8,6 +8,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.suhayb.h3ko.fragments.OneFragment;
 import com.example.suhayb.h3ko.fragments.ThreeFragment;
@@ -41,9 +44,9 @@ public class TabActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new OneFragment(), "ONE");
-        adapter.addFragment(new TwoFragment(), "TWO");
-        adapter.addFragment(new ThreeFragment(), "THREE");
+        adapter.addFragment(new OneFragment(), getString(R.string.photo_tab));
+        adapter.addFragment(new TwoFragment(), getString(R.string.info_tab));
+        adapter.addFragment(new ThreeFragment(), getString(R.string.card_tab));
         viewPager.setAdapter(adapter);
     }
 
