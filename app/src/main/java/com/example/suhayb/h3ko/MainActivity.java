@@ -1,5 +1,6 @@
 package com.example.suhayb.h3ko;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, email.getText(), Toast.LENGTH_SHORT).show();
+                Intent tabActivity = new Intent(MainActivity.this,TabActivity.class);
+                startActivity(tabActivity);
             }
         });
     }
