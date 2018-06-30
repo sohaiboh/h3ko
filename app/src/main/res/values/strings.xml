@@ -5,4 +5,10 @@
     <string name="photo_tab">Photo</string>
     <string name="info_tab">Name/Address</string>
     <string name="card_tab">Card Number</string>
+
+
+    <!--Search card number-->
+    <string name="card_number">Card Number</string>
+    <string name="search_patient">Search Patient</string>
+
 </resources>

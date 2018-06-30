@@ -4,12 +4,29 @@
     android:layout_height="match_parent"
     tools:context="com.example.suhayb.h3ko.fragments.ThreeFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="three"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/EdTxtCardNo"
+            android:inputType="number"
+            android:hint="@string/card_number"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:layout_margin="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/btnSearchPatient"
+            android:background="@drawable/rounded_corners"
+            android:text="@string/search_patient"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+    </LinearLayout>
 
 </RelativeLayout>
