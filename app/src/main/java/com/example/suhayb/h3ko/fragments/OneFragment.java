@@ -52,7 +52,7 @@ public class OneFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if(isCameraPermissionGranted()){
-//                    takePhoto();
+                    takePhoto();
                 }
             }
         });

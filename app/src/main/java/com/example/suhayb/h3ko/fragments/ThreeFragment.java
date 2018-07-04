@@ -1,6 +1,7 @@
 package com.example.suhayb.h3ko.fragments;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Binder;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -43,8 +44,6 @@ public class ThreeFragment extends Fragment {
         cardNo = view.findViewById(R.id.EdTxtCardNo);
         searchPatient = view.findViewById(R.id.btnSearchPatient);
 
-//        TODO: Continue here!!!
-        hideSoftKeyboard(getActivity().getParent());
 
         searchPatient.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,15 +52,5 @@ public class ThreeFragment extends Fragment {
             }
         });
     }
-
-    public static void hideSoftKeyboard(Activity activity) {
-        InputMethodManager inputMethodManager =
-                (InputMethodManager) activity.getSystemService(
-                        Activity.INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(
-                activity.getCurrentFocus().getWindowToken(), 0);
-    }
-
-
 
 }
