@@ -2,35 +2,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.suhayb.h3ko.fragments.TwoFragment">
+    tools:context="com.example.suhayb.h3ko.fragments.TwoFragment"
+    android:gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
 
         <LinearLayout
             android:layout_marginRight="10dp"
             android:layout_marginLeft= "10dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.2"
-            android:orientation="vertical">
+            android:layout_weight="0.25"
+            android:orientation="vertical"
+            android:gravity="center">
 
             <EditText
                 android:padding="10dp"
-                android:hint="First Name"
-                android:background="@android:color/transparent"
+                android:hint="@string/first_name"
+                android:background="@drawable/rounded_corners"
                 android:layout_width="match_parent"
-                android:layout_height="50dp" />
+                android:layout_height="50dp"
+                android:layout_margin="5dp"/>
 
             <EditText
                 android:padding="10dp"
-                android:hint="Last Name"
-                android:background="@android:color/transparent"
+                android:hint="@string/last_name"
+                android:background="@drawable/rounded_corners"
                 android:layout_width="match_parent"
-                android:layout_height="50dp" />
+                android:layout_height="50dp"
+                android:layout_margin="5dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -39,13 +44,15 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:weightSum="1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -55,10 +62,11 @@
 
                     <EditText
                         android:padding="10dp"
-                        android:hint="Street Name"
-                        android:background="@android:color/transparent"
+                        android:hint="@string/street_name"
+                        android:background="@drawable/rounded_corners"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp" />
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp" />
 
                 </LinearLayout>
 
@@ -70,15 +78,88 @@
 
                     <EditText
                         android:padding="10dp"
-                        android:hint="House No"
-                        android:background="@android:color/transparent"
+                        android:hint="@string/house_no"
+                        android:background="@drawable/rounded_corners"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp" />
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"/>
 
                 </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft= "10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.70">
+
+                    <EditText
+                        android:padding="10dp"
+                        android:hint="@string/postal_code"
+                        android:background="@drawable/rounded_corners"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.30">
+
+                    <EditText
+                        android:padding="10dp"
+                        android:hint="@string/city"
+                        android:background="@drawable/rounded_corners"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft= "10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSearchPatient"
+                android:background="@drawable/rounded_corners"
+                android:text="@string/search_patient"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
 
 
     </LinearLayout>

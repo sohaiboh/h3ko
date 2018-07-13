@@ -7,5 +7,16 @@
     <string name="info_tab">Name/Adresse</string>
     <string name="card_tab">Ausweisnummer</string>
 
+    <!--Search Patient-->
+    <string name="first_name">Vorname</string>
+    <string name="last_name">Nachname</string>
+    <string name="street_name">Straßenname</string>
+    <string name="house_no">Hausnummer</string>
+    <string name="postal_code">Plz</string>
+    <string name="city">Stadt</string>
+
+    <!--Search card number-->
+    <string name="card_number">Card Number</string>
+    <string name="search_patient">Patient suchen</string>
 
 </resources>
