@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">H3ko</string>
 
-    <!--Tag Activity-->
+    <!--Tag-->
     <string name="photo_tab">Photo</string>
     <string name="info_tab">Name/Address</string>
     <string name="card_tab">Card Number</string>
@@ -19,4 +19,8 @@
     <string name="card_number">Card Number</string>
     <string name="search_patient">Search Patient</string>
 
+    <!--Helper-->
+    <string name="ok">Ok</string>
+    <string name="error_finding_patient_title">Incorrect information</string>
+    <string name="error_finding_patient_msg">Sorry no patient found</string>
 </resources>

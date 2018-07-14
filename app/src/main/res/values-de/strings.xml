@@ -19,4 +19,9 @@
     <string name="card_number">Card Number</string>
     <string name="search_patient">Patient suchen</string>
 
+
+    <!--Helper-->
+    <string name="ok">Ok</string>
+    <string name="error_finding_patient_title">Falsche Angaben</string>
+    <string name="error_finding_patient">Entschuldigung, kein Patient ist gefunden</string>
 </resources>

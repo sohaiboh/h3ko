@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.suhayb.h3ko.R;
+import com.example.suhayb.h3ko.Utils.UtilsHelper;
 
 
 public class TwoFragment extends Fragment {
@@ -41,6 +42,9 @@ public class TwoFragment extends Fragment {
             public void onClick(View view) {
 //                TODO: Call service here!
                 Toast.makeText(getContext(), "WORKING", Toast.LENGTH_SHORT).show();
+
+//                if error from WS
+                UtilsHelper.showAlert(getContext(),getString(R.string.error_finding_patient_title),getString(R.string.error_finding_patient_msg));
             }
         });
     }
