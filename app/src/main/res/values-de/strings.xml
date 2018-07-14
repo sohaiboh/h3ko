@@ -6,6 +6,8 @@
     <string name="photo_tab">Foto</string>
     <string name="info_tab">Name/Adresse</string>
     <string name="card_tab">Ausweisnummer</string>
+    <string name="personal_data">Persönliche Daten</string>
+    <string name="medicinal_data">Medizinische Data</string>
 
     <!--Search Patient-->
     <string name="first_name">Vorname</string>

@@ -1,5 +1,6 @@
 package com.example.suhayb.h3ko.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,7 +9,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.suhayb.h3ko.MainActivity;
+import com.example.suhayb.h3ko.PatientTabActivity;
 import com.example.suhayb.h3ko.R;
+import com.example.suhayb.h3ko.TabActivity;
 import com.example.suhayb.h3ko.Utils.UtilsHelper;
 
 
@@ -43,8 +47,11 @@ public class TwoFragment extends Fragment {
 //                TODO: Call service here!
                 Toast.makeText(getContext(), "WORKING", Toast.LENGTH_SHORT).show();
 
-//                if error from WS
-                UtilsHelper.showAlert(getContext(),getString(R.string.error_finding_patient_title),getString(R.string.error_finding_patient_msg));
+                Intent tabActivity = new Intent(getContext(),PatientTabActivity.class);
+                startActivity(tabActivity);
+
+//                TODO: Place when you have hook up with web service call error
+//                UtilsHelper.showAlert(getContext(),getString(R.string.error_finding_patient_title),getString(R.string.error_finding_patient_msg));
             }
         });
     }
