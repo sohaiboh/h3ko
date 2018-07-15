@@ -1,3 +1,4 @@
+
 <resources>
     <string name="app_name">H3ko</string>
 
@@ -26,5 +27,11 @@
     <string name="error_finding_patient_msg">Sorry no patient found</string>
     <string name="internet_err_title">No Internet</string>
     <string name="internet_err_msg">You are not connected to internet, please turn on wifi or mobile data</string>
+
+    <!--Personal information-->
+    <string name="sex">Sex</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="dob">Date of Birth</string>
 
 </resources>

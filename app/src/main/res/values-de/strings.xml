@@ -21,9 +21,17 @@
     <string name="card_number">Card Number</string>
     <string name="search_patient">Patient suchen</string>
 
-
     <!--Helper-->
     <string name="ok">Ok</string>
     <string name="error_finding_patient_title">Falsche Angaben</string>
     <string name="error_finding_patient">Entschuldigung, kein Patient ist gefunden</string>
+    <string name="internet_err_title">Kein Internet</string>
+    <string name="internet_err_msg">Sie sind nicht mit dem Internet verbunden, bitte schalten Sie WLAN oder mobile Daten ein.</string>
+
+    <!--Personal information-->
+    <string name="sex">Sex</string>
+    <string name="weight">Gewicht</string>
+    <string name="height">Höhe</string>
+    <string name="dob">Geburtsdatum</string>
+
 </resources>
