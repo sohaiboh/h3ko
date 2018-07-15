@@ -45,13 +45,16 @@ public class TwoFragment extends Fragment {
             @Override
             public void onClick(View view) {
 //                TODO: Call service here!
-                Toast.makeText(getContext(), "WORKING", Toast.LENGTH_SHORT).show();
 
-                Intent tabActivity = new Intent(getContext(),PatientTabActivity.class);
-                startActivity(tabActivity);
+                if(!UtilsHelper.isNetworkAvailable(getContext())){
+//                  TODO: Place when you have hook up with web service call error
+                    UtilsHelper.showAlert(getContext(),getString(R.string.error_finding_patient_title),getString(R.string.error_finding_patient_msg));
+                }else {
+                    Intent tabActivity = new Intent(getContext(),PatientTabActivity.class);
+                    startActivity(tabActivity);
+                }
 
-//                TODO: Place when you have hook up with web service call error
-//                UtilsHelper.showAlert(getContext(),getString(R.string.error_finding_patient_title),getString(R.string.error_finding_patient_msg));
+
             }
         });
     }
