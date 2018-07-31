@@ -10,9 +10,12 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <!--
+        Use this in the editText so as to restrict the editText to number only
+        android:inputType="number"
+        -->
         <EditText
             android:id="@+id/EdTxtCardNo"
-            android:inputType="number"
             android:hint="@string/card_number"
             android:background="@android:color/transparent"
             android:gravity="center"
