@@ -39,4 +39,14 @@
     <string name="height">Height</string>
     <string name="dob">Date of Birth</string>
 
+    <!--Medicinal data-->
+    <string name="vorerkrankungen">Pre-existing conditions</string>
+    <string name="aktuelle_behandlungen">Current treatments</string>
+    <string name="aktuelle_mediaktion">Current medication</string>
+    <string name="aktuelle_vergangene_symptomen">Current past symptoms</string>
+    <string name="herztoene">Heart Beat</string>
+    <string name="send_to_server">Send to server</string>
+    <string name="edit_info">Edit information</string>
+
+
 </resources>
