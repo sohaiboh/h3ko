@@ -2,6 +2,7 @@ package com.example.suhayb.h3ko.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Binder;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.suhayb.h3ko.PatientTabActivity;
 import com.example.suhayb.h3ko.R;
 import com.example.suhayb.h3ko.Utils.Constants;
 import com.example.suhayb.h3ko.Utils.UtilsHelper;
@@ -78,14 +80,15 @@ public class ThreeFragment extends Fragment {
     }
 
     private void stringXml() {
-        String url = "http://dowser-medi-app.com.w00ffa2d.kasserver.com/index.php?getPatientByCardId=1";
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+        String url = Constants.GET_PATIENT_BY_CARD_ID + Constants.CARD_ID;
+        StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(getActivity(),response,Toast.LENGTH_LONG).show();
-
                         xmlParser(response);
+
+                        Intent tabActivity = new Intent(getContext(),PatientTabActivity.class);
+                        startActivity(tabActivity);
                     }
                 },
                 new Response.ErrorListener() {
@@ -97,11 +100,11 @@ public class ThreeFragment extends Fragment {
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<String, String>();
-                params.put("card_id","AX34K75");
+                params.put(Constants.CARD_ID_KEY,cardNo.getText().toString());
                 return params;
             }
         };
-        queue.add(stringRequest);
+        queue.add(request);
     }
 
     private void xmlParser(String response) {
@@ -125,22 +128,6 @@ public class ThreeFragment extends Fragment {
         Patientendaten patientendaten = gsonXml.fromXml(response,Patientendaten.class);
 
         editor = mPreferences.edit();
-//
-//        //    Generelle Dokumentaiton
-//        public static final String vorerkrankungen = "vorerkrankungen";
-//        public static final String aktuelle_behandlungen = "aktuelle_behandlungen";
-//        public static final String aktuelle_mediaktion = "aktuelle_mediaktion";
-//        public static final String aktuelle_vergangene_symptomen = "aktuelle_vergangene_symptomen";
-//        public static final String andere = "andere";
-//
-//        //    visuelle Dokumentaiton
-//        public static final String roentgentbilder = "roentgentbilder";
-//        public static final String mrt_bilder = "mrt_bilder";
-//        public static final String ultrashall = "ultrashall";
-//
-//        //    akustische Dokumentaiton
-//        public static final String herztoene = "herztoene";
-
 
         //    Personendaten
         editor.putString(Constants.name, patientendaten.dokumentation.get(0).getName());
@@ -148,6 +135,19 @@ public class ThreeFragment extends Fragment {
         editor.putString(Constants.groesse, patientendaten.dokumentation.get(0).getGroesse());
         editor.putString(Constants.geschlecht, patientendaten.dokumentation.get(0).getGeschlecht());
 
+        editor.putString(Constants.vorerkrankungen, patientendaten.dokumentation.get(1).getVorerkrankungen());
+        editor.putString(Constants.aktuelle_behandlungen, patientendaten.dokumentation.get(1).getAktuelle_behandlungen());
+        editor.putString(Constants.aktuelle_mediaktion, patientendaten.dokumentation.get(1).getAktuelle_mediaktion());
+        editor.putString(Constants.aktuelle_vergangene_symptomen, patientendaten.dokumentation.get(1).getAktuelle_vergangene_symptomen());
+        editor.putString(Constants.andere, patientendaten.dokumentation.get(1).getAndere());
+
+        editor.putString(Constants.roentgentbilder, patientendaten.dokumentation.get(2).getRoentgentbilder());
+        editor.putString(Constants.mrt_bilder, patientendaten.dokumentation.get(2).getMrt_bilder());
+        editor.putString(Constants.ultrashall, patientendaten.dokumentation.get(2).getUltrashall());
+
+        editor.putString(Constants.herztoene, patientendaten.dokumentation.get(3).getHerztoene());
+
         editor.apply();
+
     }
 }

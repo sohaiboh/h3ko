@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TabActivity" />
-        <activity android:name=".PatientTabActivity"></activity>
+        <activity android:name=".PatientTabActivity"/>
     </application>
 
 </manifest>
