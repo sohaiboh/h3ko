@@ -2,6 +2,11 @@
 <resources>
     <string name="app_name">H3ko</string>
 
+    <!--MainActivty-->
+    <string name="err_title">Invalid</string>
+    <string name="email_msg">Please enter a valid email address</string>
+    <string name="password_msg">Please enter a valid password address</string>
+
     <!--Tag-->
     <string name="photo_tab">Photo</string>
     <string name="info_tab">Name/Address</string>

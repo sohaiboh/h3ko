@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.suhayb.h3ko.Utils.UtilsHelper;
 import com.example.suhayb.h3ko.asyncTasks.GetPatientByCardIdTask;
 import com.example.suhayb.h3ko.asyncTasks.OnGetIdTaskCompleted;
 
@@ -32,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if(email.getText().toString().isEmpty()){
+                    UtilsHelper.showAlert(MainActivity.this,getString(R.string.err_title),getString(R.string.email_msg));
+                    return;
+                }else if(password.getText().toString().isEmpty()){
+                    UtilsHelper.showAlert(MainActivity.this,getString(R.string.err_title),getString(R.string.password_msg));
+                    return;
+                }
+
                 Intent tabActivity = new Intent(MainActivity.this,TabActivity.class);
                 startActivity(tabActivity);
             }
